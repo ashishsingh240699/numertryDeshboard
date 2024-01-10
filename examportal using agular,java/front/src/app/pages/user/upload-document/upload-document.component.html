@@ -1,6 +1,8 @@
-<p>upload-document works!</p>
 
+<mat-card>
+<h1>Upload Document</h1>
 <form (ngSubmit)="dataUpload()">
 <input type="file" (change)="onFileSelected($event)" />
 <button type="submit" mat-raised-button color="primary">upload</button>
 </form>
+</mat-card>

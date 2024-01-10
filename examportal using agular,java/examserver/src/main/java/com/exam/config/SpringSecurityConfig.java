@@ -52,7 +52,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/generate-token","/user/").permitAll()
+                .antMatchers("/generate-token","/user/","/changePassword",
+                        "/review/","/review/get","/review/{id}","/review/update/{id}",
+                        "/bank/","/bank/get","/bank/{id}","/bank/update/{id}",
+                        "/query/","/query/get",
+                        "/file/upload","/file/profile/{imageName}"
+                        ).permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated()
                 .and()

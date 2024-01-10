@@ -1,0 +1,6 @@
+<p>upload-document works!</p>
+
+<form (ngSubmit)="dataUpload()">
+<input type="file" (change)="onFileSelected($event)" />
+<button type="submit" mat-raised-button color="primary">upload</button>
+</form>

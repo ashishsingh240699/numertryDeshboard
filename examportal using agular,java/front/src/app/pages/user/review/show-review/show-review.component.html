@@ -1,0 +1,43 @@
+
+
+
+<div class="Detail">
+    <h1>Table Bank Details</h1>
+    <div class="delete">   
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Review_For</th>
+                <th>Course</th>
+                <th>Overall_Rating</th>
+                <th>is_Publish</th>
+                <th>Review_Date</th>
+               
+                 
+                <th class="text-center" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of review">
+                <td>{{data.id}}</td>
+                <td>{{data.review_For}}</td>
+                <td>{{data.course}}</td>
+                <td>{{data.overall_Rating}}</td>
+                <td>{{data.is_publish}}</td>
+                <td>{{data.review_date}}</td>
+               
+                
+                <!-- <td><button [routerLink]="'/note/'+data.id" mat-raised-button color="info">Note</button></td> -->
+                 <td><button (click)="deleteReview(data.id)" mat-raised-button color="accent">Delete</button></td> 
+             
+                <!-- <td><button [routerLink]="'/Update/'+data.id" mat-raised-button color="primary">Update</button></td>  -->
+    
+            </tr>
+        </tbody>
+    </table>
+    
+    </div>
+
+

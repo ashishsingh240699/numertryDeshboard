@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+       
+        <div class="image">
+        <div class="row mt20">
+         
+            <div class="col-md-6 offset-md-3 ">
+                <mat-card>
+                    <div class="container text-center mt20">
+                        <img class="img" src="../../../assets/query.jpg" alt="">
+                    </div>
+ 
+                    <h1 class="text-center">Queries Here !!</h1>
+                    <!-- {{loginData | json}} -->
+                    <form (ngSubmit)="sendQuery()" >
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input [(ngModel)]="query.name" required type="text" name="name" matInput placeholder="enter the name">
+                            <!-- <mat-hint>Current Password*</mat-hint> -->
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width">
+                            <mat-label>Write the Query*</mat-label>
+                            <textarea [(ngModel)]="query.queryField" matInput placeholder="Ex. It makes me feel..."></textarea>
+                          </mat-form-field>
+                        <div class="container text-center">
+                            <button class="ml20" type="submit" mat-raised-button color="primary">Send</button>
+                            <button class="ml20" type="reset" mat-raised-button color="accent">Reset</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+       </div>
+    </div>
+</div>
+

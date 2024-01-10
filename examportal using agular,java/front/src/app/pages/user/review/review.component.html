@@ -1,0 +1,49 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                <img src="../../../assets/review.jpeg" alt="">
+            </div>
+
+                <h2 class="text-center">Review</h2>
+                <!-- {{user| json}} -->
+
+                <form (ngSubmit)="reviewAdd()">
+                   
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Review For*</mat-label>
+                        <input [(ngModel)]="review.review_For" type="text" name="review_For" matInput placeholder="enter the Review For">
+                    </mat-form-field>
+
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Course* </mat-label>
+                        <input [(ngModel)]="review.course" type="text" name="course" matInput placeholder="enter the Course">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Overall Rating*</mat-label>
+                        <input [(ngModel)]="review.overall_Rating" type="text" name="overall_Rating" matInput placeholder="enter the Overall Rating">
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>is Pubilsh*</mat-label>
+                        <input [(ngModel)]="review.is_publish" type="text" name="is_publish" matInput placeholder="enter the is pubilsh">
+                    </mat-form-field>
+                    <!-- <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>UPI ID*</mat-label>
+                        <input [(ngModel)]="bank.upiId" type="text" name="upiId" matInput placeholder="enter the UPI ID">
+                    </mat-form-field> -->
+                   
+                    <div class="container text-center">
+                    <button type="submit" mat-raised-button color="primary">Add Review</button>
+                    <button routerLink="/showReview" style="margin-left: 20px;" mat-raised-button color="accent">show Review</button>
+                </div>
+                </form>
+            </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

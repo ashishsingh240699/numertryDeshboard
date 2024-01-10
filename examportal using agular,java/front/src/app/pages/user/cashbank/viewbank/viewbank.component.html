@@ -1,0 +1,42 @@
+
+
+
+<div class="Detail">
+    <h1>Table Bank Details</h1>
+    <div class="delete">   
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Bank Name</th>
+                <th>AccountHolderName</th>
+                <th>AccountNumber</th>
+                <th>IFSC Code</th>
+                <th>UPI Id</th>
+               
+                 
+                <th class="text-center" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of bank">
+                <td>{{data.id}}</td>
+                <td>{{data.bankName}}</td>
+                <td>{{data.accountHolderName}}</td>
+                <td>{{data.accountNumber}}</td>
+                <td>{{data.ifscCode}}</td>
+                <td>{{data.upiId}}</td>
+               
+                
+                <!-- <td><button [routerLink]="'/note/'+data.id" mat-raised-button color="info">Note</button></td> -->
+                <td><button (click)="deleteBank(data.id)" mat-raised-button color="accent">Delete</button></td>
+<!--              
+                <td><button [routerLink]="'/Update/'+data.id" mat-raised-button color="primary">Update</button></td> -->
+    
+            </tr>
+        </tbody>
+    </table>
+    
+    </div>
+
